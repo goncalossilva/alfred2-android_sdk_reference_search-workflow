@@ -1,3 +1,5 @@
+Encoding.default_external = Encoding::UTF_8
+
 ($LOAD_PATH << File.expand_path("..", __FILE__)).uniq!
 
 require "rubygems" unless defined? Gem
@@ -10,7 +12,7 @@ require "json"
 
 REFERENCE_CACHE_DURATION = 7200 # 2 hours
 
-REFERENCE_JS_URL = "http://developer.android.com/reference/lists.js";
+REFERENCE_JS_URL = "https://developer.android.com/reference/lists.js";
 XML_REFERENCE_JS_URL = "android-xml-ref.js"
 
 def reference_search(alfred, query)
